@@ -1,97 +1,170 @@
 import Navbar from "../components/layout/Navbar";
+import StatCard from "../components/dashboard/StatCard";
 
 export default function Dashboard() {
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
 
-      <div className="max-w-7xl mx-auto px-8 py-12">
+      <div className="max-w-7xl mx-auto px-8 py-10">
 
-        <div className="mb-10">
-          <h1 className="text-4xl font-bold">Dashboard</h1>
-          <p className="text-gray-400 mt-2">
-            Monitor calls, leads and campaign performance.
-          </p>
-        </div>
+        {/* Header */}
+        {/* Header */}
+<div className="mb-10">
+
+  <p className="text-emerald-400 text-sm uppercase tracking-widest mb-2">
+    Dashboard
+  </p>
+
+  <h1 className="text-4xl font-bold">
+    Welcome Back 👋
+  </h1>
+
+  <p className="text-gray-400 mt-3 max-w-xl">
+    Monitor your AI calling platform, track campaigns, manage customers,
+    and review recent conversations from one place.
+  </p>
+
+</div>
 
         {/* Stats */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
 
-        <div className="grid md:grid-cols-4 gap-6 mb-10">
+          <StatCard
+            title="Campaigns"
+            value="03"
+            subtitle="Active Campaigns"
+            color="emerald"
+          />
 
-          <div className="bg-[#111827] border border-gray-800 rounded-2xl p-6">
-            <p className="text-gray-400">Total Leads</p>
-            <h2 className="text-4xl font-bold mt-2">124</h2>
-          </div>
+          <StatCard
+            title="Customers"
+            value="11"
+            subtitle="Registered"
+            color="cyan"
+          />
 
-          <div className="bg-[#111827] border border-gray-800 rounded-2xl p-6">
-            <p className="text-gray-400">Calls Today</p>
-            <h2 className="text-4xl font-bold mt-2">57</h2>
-          </div>
+          <StatCard
+            title="Leads"
+            value="09"
+            subtitle="Qualified"
+            color="emerald"
+          />
 
-          <div className="bg-[#111827] border border-gray-800 rounded-2xl p-6">
-            <p className="text-gray-400">Campaigns</p>
-            <h2 className="text-4xl font-bold mt-2">8</h2>
-          </div>
-
-          <div className="bg-[#111827] border border-gray-800 rounded-2xl p-6">
-            <p className="text-gray-400">Conversion Rate</p>
-            <h2 className="text-4xl font-bold mt-2 text-emerald-400">
-              32%
-            </h2>
-          </div>
+          <StatCard
+            title="Conversations"
+            value="05"
+            subtitle="Completed"
+            color="cyan"
+          />
 
         </div>
 
+        {/* Content */}
         <div className="grid lg:grid-cols-2 gap-6">
 
+          {/* Recent Campaigns */}
+
           <div className="bg-[#111827] border border-gray-800 rounded-2xl p-6">
-            <h3 className="text-xl font-semibold mb-5">
-              Recent Campaigns
-            </h3>
+
+            <div className="flex justify-between items-center mb-6">
+
+              <h2 className="text-xl font-semibold">
+                Recent Campaigns
+              </h2>
+
+              <button className="text-emerald-400 text-sm hover:underline">
+                View All
+              </button>
+
+            </div>
 
             <div className="space-y-4">
 
-              <div className="flex justify-between">
-                <span>Website Leads Campaign</span>
-                <span className="text-emerald-400">Running</span>
+              <div className="border border-gray-800 rounded-xl p-4 hover:border-emerald-500/40 transition">
+                <h3 className="font-medium">
+                  Website Development
+                </h3>
+
+                <p className="text-sm text-gray-400 mt-1">
+                  Status: Active • 120 Calls
+                </p>
               </div>
 
-              <div className="flex justify-between">
-                <span>Digital Marketing Campaign</span>
-                <span className="text-yellow-400">Paused</span>
+              <div className="border border-gray-800 rounded-xl p-4 hover:border-emerald-500/40 transition">
+                <h3 className="font-medium">
+                  Google Ads
+                </h3>
+
+                <p className="text-sm text-gray-400 mt-1">
+                  Status: Draft • 0 Calls
+                </p>
               </div>
 
-              <div className="flex justify-between">
-                <span>SaaS Demo Campaign</span>
-                <span className="text-emerald-400">Running</span>
+              <div className="border border-gray-800 rounded-xl p-4 hover:border-emerald-500/40 transition">
+                <h3 className="font-medium">
+                  Meta Ads
+                </h3>
+
+                <p className="text-sm text-gray-400 mt-1">
+                  Status: Completed • 84 Calls
+                </p>
               </div>
 
             </div>
+
           </div>
 
+          {/* Recent Leads */}
+
           <div className="bg-[#111827] border border-gray-800 rounded-2xl p-6">
-            <h3 className="text-xl font-semibold mb-5">
-              Recent Leads
-            </h3>
+
+            <div className="flex justify-between items-center mb-6">
+
+              <h2 className="text-xl font-semibold">
+                Recent Leads
+              </h2>
+
+              <button className="text-emerald-400 text-sm hover:underline">
+                View All
+              </button>
+
+            </div>
 
             <div className="space-y-4">
 
-              <div className="flex justify-between">
-                <span>Rahul Sharma</span>
-                <span>Interested</span>
+              <div className="border border-gray-800 rounded-xl p-4 hover:border-cyan-500/40 transition">
+                <h3 className="font-medium">
+                  Rahul
+                </h3>
+
+                <p className="text-sm text-gray-400 mt-1">
+                  Website Development • New Lead
+                </p>
               </div>
 
-              <div className="flex justify-between">
-                <span>Priya Verma</span>
-                <span>Callback</span>
+              <div className="border border-gray-800 rounded-xl p-4 hover:border-cyan-500/40 transition">
+                <h3 className="font-medium">
+                  Amit
+                </h3>
+
+                <p className="text-sm text-gray-400 mt-1">
+                  Google Ads • Qualified
+                </p>
               </div>
 
-              <div className="flex justify-between">
-                <span>Amit Kumar</span>
-                <span>Qualified</span>
+              <div className="border border-gray-800 rounded-xl p-4 hover:border-cyan-500/40 transition">
+                <h3 className="font-medium">
+                  Priya
+                </h3>
+
+                <p className="text-sm text-gray-400 mt-1">
+                  Mobile App Development • Contacted
+                </p>
               </div>
 
             </div>
+
           </div>
 
         </div>

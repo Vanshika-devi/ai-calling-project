@@ -112,28 +112,27 @@ export default function LandingPage() {
 
         </div>
       </section>
+      
+  {/* FEATURES */}
+  <section className="max-w-7xl mx-auto px-8 py-24">
 
-{/* FEATURES */}
-{/* FEATURES */}
-<section className="max-w-7xl mx-auto px-8 py-24">
+    <div className="text-center mb-16">
 
-  <div className="text-center mb-16">
+      <p className="text-emerald-400 uppercase tracking-[0.25em] text-sm mb-4">
+        Features
+      </p>
 
-    <p className="text-emerald-400 uppercase tracking-[0.25em] text-sm mb-4">
-      Features
-    </p>
+      <h2 className="text-4xl font-bold">
+        Everything You Need
+      </h2>
 
-    <h2 className="text-4xl font-bold">
-      Everything You Need
-    </h2>
+      <p className="text-gray-400 mt-5 max-w-2xl mx-auto">
+        Powerful tools designed to automate, manage and optimize your AI calling workflow.
+      </p>
 
-    <p className="text-gray-400 mt-5 max-w-2xl mx-auto">
-      Powerful tools designed to automate, manage and optimize your AI calling workflow.
-    </p>
+    </div>
 
-  </div>
-
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
     {/* AI Voice Calls */}
     <div className="group rounded-2xl p-[1.5px] bg-gradient-to-br from-emerald-500/50 via-cyan-500/40 to-emerald-500/50 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] transition-all duration-300 hover:-translate-y-1">
