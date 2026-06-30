@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import {
   PhoneCall,
@@ -41,35 +42,27 @@ export default function LandingPage() {
 
           <div className="flex flex-wrap justify-center gap-4 mt-10">
 
-            <button
-              className="
-              px-8 py-4
-              rounded-xl
-              bg-gradient-to-r
-              from-emerald-500
-              to-cyan-500
-              font-semibold
-              hover:scale-105
-              transition
-              shadow-xl
-              shadow-emerald-500/20
-            "
-            >
-              Start Free Trial
-            </button>
+            <div className="flex flex-wrap justify-center gap-4 mt-10">
+              <Link
+                to="/register"
+                className="
+                  px-8
+                  py-4
+                  rounded-xl
+                  bg-gradient-to-r
+                  from-emerald-500
+                  to-cyan-500
+                  font-semibold
+                  hover:scale-105
+                  transition
+                  shadow-xl
+                  shadow-emerald-500/20
+                "
+              >
+                Get Started
+              </Link>
 
-            <button
-              className="
-              px-8 py-4
-              rounded-xl
-              border
-              border-gray-700
-              hover:border-gray-500
-              transition
-            "
-            >
-              Book Demo
-            </button>
+</div>
 
           </div>
         </div>

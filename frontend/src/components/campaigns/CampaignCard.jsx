@@ -1,3 +1,5 @@
+// src/components/campaigns/CampaignCard.jsx
+
 import {
   PhoneCall,
   CircleDot,
@@ -10,7 +12,6 @@ export default function CampaignCard({
   status,
   calls,
 }) {
-
   const getStatusColor = () => {
     switch (status) {
       case "Active":
@@ -30,30 +31,28 @@ export default function CampaignCard({
   return (
     <div
       className="
-      group
-      rounded-2xl
-      p-[1px]
-      bg-gradient-to-br
-      from-emerald-500/40
-      via-cyan-500/30
-      to-emerald-500/40
-      hover:shadow-[0_15px_35px_rgba(16,185,129,0.12)]
-      hover:-translate-y-1
-      transition-all
-      duration-300
-    "
+        group
+        rounded-2xl
+        border
+        border-gray-800
+        bg-[#111827]
+        p-6
+        hover:border-emerald-500/30
+        hover:shadow-lg
+        hover:shadow-emerald-500/5
+        transition-all
+        duration-300
+      "
     >
-      <div className="bg-[#111827] rounded-2xl p-6 h-full">
+      {/* Top */}
 
-        {/* Top */}
+      <div className="flex items-start justify-between">
 
-        <div className="flex justify-between items-start">
-
-          <div
-            className="
-            w-12
-            h-12
-            rounded-xl
+        <div
+          className="
+            w-10
+            h-10
+            rounded-lg
             bg-emerald-500/10
             border
             border-emerald-500/20
@@ -61,77 +60,88 @@ export default function CampaignCard({
             items-center
             justify-center
             text-emerald-400
-            group-hover:scale-110
             transition
+            duration-300
+            group-hover:bg-emerald-500/15
           "
-          >
-            <PhoneCall size={22} />
-          </div>
+        >
+          <PhoneCall
+            size={18}
+            strokeWidth={2}
+          />
+        </div>
 
-          <span
-            className={`
+        <span
+          className={`
             px-3
             py-1
             rounded-full
             text-xs
             border
+            font-medium
             ${getStatusColor()}
           `}
-          >
-            {status}
+        >
+          {status}
+        </span>
+
+      </div>
+
+      {/* Body */}
+
+      <div className="mt-6">
+
+        <h3 className="text-xl font-semibold text-white">
+          {name}
+        </h3>
+
+        <p className="text-gray-400 mt-2 text-sm">
+          {service}
+        </p>
+
+      </div>
+
+      {/* Divider */}
+
+      <div className="my-6 border-t border-gray-800" />
+
+      {/* Bottom */}
+
+      <div className="flex items-center justify-between">
+
+        <div className="flex items-center gap-2">
+
+          <CircleDot
+            size={12}
+            className="text-emerald-400"
+          />
+
+          <span className="text-sm text-gray-400">
+            {calls} Calls
           </span>
 
         </div>
 
-        {/* Body */}
-
-        <div className="mt-6">
-
-          <h3 className="text-xl font-semibold">
-            {name}
-          </h3>
-
-          <p className="text-gray-400 mt-2">
-            {service}
-          </p>
-
-        </div>
-
-        {/* Bottom */}
-
-        <div className="flex justify-between items-center mt-8">
-
-          <div className="flex items-center gap-2 text-gray-400">
-
-            <CircleDot
-              size={16}
-              className="text-emerald-400"
-            />
-
-            <span className="text-sm">
-              {calls} Calls
-            </span>
-
-          </div>
-
-          <button
-            className="
+        <button
+          className="
             flex
             items-center
-            gap-2
+            gap-1
             text-sm
+            font-medium
             text-emerald-400
             hover:text-white
-            transition
+            transition-colors
           "
-          >
-            View
+        >
+          View
 
-            <ArrowUpRight size={16} />
+          <ArrowUpRight
+            size={14}
+            strokeWidth={2}
+          />
 
-          </button>
-
-        </div>
+        </button>
 
       </div>
 
